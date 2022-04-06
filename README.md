@@ -1,45 +1,50 @@
-# template-empty
-_description: An empty template for your code sample_
+# python-email-send
 
-Please include this sample in the [org readme](https://github.com/nylas-samples/.github/blob/main/profile/README.md)?
+This sample will show you to easily send an email with the Nylas Python SDK.
 
-<br />
+## Setup
 
-## Installation
+### System dependencies
 
-The recommended way to use this sample is ...
+- Python v3.x
 
-You can also clone the repository ...
+### Gather environment variables
 
-You'll find more detailed instructions ...
+You'll need the following values:
 
+```text
+ACCESS_TOKEN = ""
+CLIENT_ID = ""
+CLIENT_SECRET = ""
+RECIPIENT_ADDRESS = ""
+```
 
-<br />
+Add the above values to a new `.env` file:
 
+```bash
+$ touch .env # Then add your env variables
+```
 
-## FAQ
+### Install dependencies
 
-Q: 
+```bash
+$ pip3 install nylas
+```
 
-A: 
+## Usage
 
+Run the script using the `python3` command:
 
-<br />
+```bash
+$ python3 SendEmail.py
+```
 
-## Get support
+When your message is successfully sent, you'll get the following output in your terminal:
 
-If you found a bug or want to suggest a new [feature/use case/sample], please file an issue.
+```text
+Message "With Love, from Nylas" was sent with ID 111111111111111111
+```
 
-If you have questions, comments, or need help with code, we're here to help:
-- Email us at support@nylas.com
+## Learn more
 
-<br />
-
-## Contributing
-
-...
-
-<br />
-
-## Authors
-- @
+Visit our [Nylas Python SDK documentation](https://developer.nylas.com/docs/developer-tools/sdk/python-sdk/) to learn more.
