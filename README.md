@@ -2,6 +2,8 @@
 
 This sample will show you to easily send an email with the Nylas Python SDK.
 
+You can follow along step-by-step in our blog post ["How to Send Emails with the Nylas Python SDK"](https://www.nylas.com/blog/how-to-send-emails-with-the-nylas-python-sdk/).
+
 ## Setup
 
 ### System dependencies
