@@ -23,7 +23,7 @@ draft.to = [{'name': 'Recipient name', 'email': os.environ.get('RECIPIENT_ADDRES
 try:
 # Send your email  
 	message = draft.send()
-	print("Message {} was sent with ID {}".format(message['subject'], message['id']))
+	print("Message \"{}\" was sent with ID {}".format(message['subject'], message['id']))
 except:
 # Something went wrong  
 	print("An {} error ocurred".format(sys.exc_info()[0]))
