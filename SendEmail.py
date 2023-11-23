@@ -1,29 +1,22 @@
-# Load your env variables
+from nylas import Client
 from dotenv import load_dotenv
+import os
+
+# Load our .env file
 load_dotenv()
 
-# Import your dependencies
-import os
-import sys
-from nylas import APIClient
-
-# Initialize your Nylas API client
-nylas = APIClient(
-    os.environ.get('CLIENT_ID'),
-    os.environ.get('CLIENT_SECRET'),
-    os.environ.get('ACCESS_TOKEN')
+# Initialize Nylas client
+nylas = Client(
+    api_key = os.environ.get("V3_API_KEY")
 )
 
-# Create a draft email
-draft = nylas.drafts.create()
-draft.subject = 'With Love, from Nylas'
-draft.body = 'Well well well...'
-draft.to = [{'name': 'Recipient name', 'email': os.environ.get('RECIPIENT_ADDRESS')}]
+body = {"subject" : "With Love, from Nylas V3", 
+             "body":"Well well well...",
+             "to" : [{"name":os.environ.get("RECIPIENT_NAME"),
+             "email" : os.environ.get("RECIPIENT_ADDRESS")}]}
 
 try:
-# Send your email  
-	message = draft.send()
-	print("Message \"{}\" was sent with ID {}".format(message['subject'], message['id']))
-except:
-# Something went wrong  
-	print("An {} error ocurred".format(sys.exc_info()[0]))
+    message = nylas.messages.send(os.environ.get("GRANT_ID"), request_body = body).data
+    print(f"Message \"{message.subject}\" was sent with ID {message.id}")
+except Exception as e:
+	print(f"An error ocurred: {e}")
