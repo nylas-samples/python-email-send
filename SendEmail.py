@@ -7,7 +7,8 @@ load_dotenv()
 
 # Initialize Nylas client
 nylas = Client(
-    api_key = os.environ.get("V3_API_KEY")
+    api_key = os.environ.get("V3_API_KEY"),
+    api_uri = os.environ.get('NYLAS_API_URI')
 )
 
 body = {"subject" : "With Love, from Nylas V3", 
