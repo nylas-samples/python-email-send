@@ -15,9 +15,9 @@ You can follow along step-by-step in our blog post ["How to Send Emails with the
 You'll need the following values:
 
 ```text
-ACCESS_TOKEN = ""
-CLIENT_ID = ""
-CLIENT_SECRET = ""
+V3_API_KEY = ""
+GRANT_ID = ""
+RECIPIENT_NAME = ""
 RECIPIENT_ADDRESS = ""
 ```
 
