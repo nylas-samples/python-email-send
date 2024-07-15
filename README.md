@@ -15,10 +15,10 @@ You can follow along step-by-step in our blog post ["How to Send Emails with the
 You'll need the following values:
 
 ```text
-V3_API_KEY = ""
-GRANT_ID = ""
-RECIPIENT_NAME = ""
-RECIPIENT_ADDRESS = ""
+NYLAS_API_KEY = ""
+NYLAS_API_URI=""
+NYLAS_GRANT_ID = ""
+RECIPIENT_EMAIL = ""
 ```
 
 Add the above values to a new `.env` file:
