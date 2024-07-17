@@ -26,11 +26,18 @@ Add the above values to a new `.env` file:
 ```bash
 $ touch .env # Then add your env variables
 ```
+### Initiate virtual envirnoment
+
+```bash
+python3 -m venv path/to/venv
+source path/to/venv/bin/activate
+```
 
 ### Install dependencies
 
 ```bash
 $ pip3 install nylas
+$ pip3 install python-dotenv
 ```
 
 ## Usage
